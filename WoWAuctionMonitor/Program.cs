@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using WowAuctionAggrigator;
+using System.Configuration;
 
 namespace WoWAuctionMonitor
 {
@@ -11,7 +12,13 @@ namespace WoWAuctionMonitor
     {
         static void Main(string[] args)
         {
-            AuctionLoader.LoadAuctionData();
+            //AuctionLoader.LoadAuctionData();
+            using (AuctionLoader al = new AuctionLoader(ConfigurationManager.ConnectionStrings["Database"].ConnectionString, ConfigurationManager.AppSettings.Get("BlizzAPIKey"), "stormrage")) 
+            {
+                al.loadDataTabe();
+                al.clearPriorLoadedData();
+                al.bulkCopyAuctions();
+            }
         }
     }
 }
