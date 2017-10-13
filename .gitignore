@@ -260,3 +260,6 @@ paket-files/
 __pycache__/
 *.pyc
 /wowdotnet
+/WoWAuctionMonitor/dev.config
+/WoWAuctionMonitor/App.Debug.config
+/WoWAuctionMonitor/App.Release.config
