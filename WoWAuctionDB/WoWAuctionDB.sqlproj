@@ -61,5 +61,6 @@
   <ItemGroup>
     <Build Include="AuctionRaw.sql" />
     <Build Include="AuctionAgg.sql" />
+    <Build Include="AggAuctionData.sql" />
   </ItemGroup>
 </Project>
