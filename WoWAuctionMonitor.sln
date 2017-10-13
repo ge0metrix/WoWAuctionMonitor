@@ -5,6 +5,12 @@ VisualStudioVersion = 15.0.26730.16
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WoWAuctionMonitor", "WoWAuctionMonitor\WoWAuctionMonitor.csproj", "{F82B46B8-82F0-4EBC-9224-55FFB8186F81}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WowAuctionAggrigator", "WowAuctionAggrigator\WowAuctionAggrigator.csproj", "{6C7DEEAE-3669-4C64-9F2F-0D6D781B9666}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Explorers", "wowdotnet\Explorers\Explorers.csproj", "{2A828141-9EF2-4A8A-8944-B2F2D1775CC9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FncAuctionLoader", "FncAuctionLoader\FncAuctionLoader.csproj", "{B402C948-9E23-49BC-A117-6525F81A9552}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +21,18 @@ Global
 		{F82B46B8-82F0-4EBC-9224-55FFB8186F81}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F82B46B8-82F0-4EBC-9224-55FFB8186F81}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F82B46B8-82F0-4EBC-9224-55FFB8186F81}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6C7DEEAE-3669-4C64-9F2F-0D6D781B9666}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C7DEEAE-3669-4C64-9F2F-0D6D781B9666}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6C7DEEAE-3669-4C64-9F2F-0D6D781B9666}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6C7DEEAE-3669-4C64-9F2F-0D6D781B9666}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2A828141-9EF2-4A8A-8944-B2F2D1775CC9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2A828141-9EF2-4A8A-8944-B2F2D1775CC9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2A828141-9EF2-4A8A-8944-B2F2D1775CC9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2A828141-9EF2-4A8A-8944-B2F2D1775CC9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B402C948-9E23-49BC-A117-6525F81A9552}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B402C948-9E23-49BC-A117-6525F81A9552}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B402C948-9E23-49BC-A117-6525F81A9552}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B402C948-9E23-49BC-A117-6525F81A9552}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

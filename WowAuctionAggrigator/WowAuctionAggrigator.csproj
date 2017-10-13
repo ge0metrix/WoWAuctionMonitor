@@ -4,16 +4,15 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{F82B46B8-82F0-4EBC-9224-55FFB8186F81}</ProjectGuid>
-    <OutputType>Exe</OutputType>
-    <RootNamespace>WoWAuctionMonitor</RootNamespace>
-    <AssemblyName>WoWAuctionMonitor</AssemblyName>
+    <ProjectGuid>{6C7DEEAE-3669-4C64-9F2F-0D6D781B9666}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WowAuctionAggrigator</RootNamespace>
+    <AssemblyName>WowAuctionAggrigator</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -23,7 +22,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -43,16 +41,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Program.cs" />
+    <Compile Include="AuctionLoader.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\WowAuctionAggrigator\WowAuctionAggrigator.csproj">
-      <Project>{6c7deeae-3669-4c64-9f2f-0d6d781b9666}</Project>
-      <Name>WowAuctionAggrigator</Name>
+    <ProjectReference Include="..\wowdotnet\Explorers\Explorers.csproj">
+      <Project>{2a828141-9ef2-4a8a-8944-b2f2d1775cc9}</Project>
+      <Name>Explorers</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
