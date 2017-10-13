@@ -12,12 +12,12 @@ namespace WoWAuctionMonitor
     {
         static void Main(string[] args)
         {
-            //AuctionLoader.LoadAuctionData();
             using (AuctionLoader al = new AuctionLoader(ConfigurationManager.ConnectionStrings["Database"].ConnectionString, ConfigurationManager.AppSettings.Get("BlizzAPIKey"), "stormrage")) 
             {
                 al.loadDataTabe();
                 al.clearPriorLoadedData();
                 al.bulkCopyAuctions();
+                al.aggAuctionData();
             }
         }
     }

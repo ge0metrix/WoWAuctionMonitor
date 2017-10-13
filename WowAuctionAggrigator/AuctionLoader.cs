@@ -79,7 +79,7 @@ namespace WowAuctionAggrigator
             using (SqlBulkCopy bcp = new SqlBulkCopy(_conn))
             {
                 bcp.BulkCopyTimeout = 0;
-                bcp.DestinationTableName = "Auctions";
+                bcp.DestinationTableName = "AuctionRaw";
                 bcp.ColumnMappings.Add(0, 1);
                 bcp.ColumnMappings.Add(1, 2);
                 bcp.ColumnMappings.Add(2, 3);
@@ -102,7 +102,17 @@ namespace WowAuctionAggrigator
  
             using (SqlCommand cmd = new SqlCommand { Connection = _conn, CommandTimeout = 0 })
             {
-                cmd.CommandText = "DELETE FROM Auctions WHERE LoadDate = '" + _dateTimeOffset.DateTime.ToString() + "';";
+                cmd.CommandText = "DELETE FROM AuctionRaw WHERE LoadDate = '" + _dateTimeOffset.DateTime.ToString() + "';";
+                cmd.ExecuteNonQuery();
+            }
+        }
+
+
+        public void aggAuctionData()
+        {
+            using (SqlCommand cmd = new SqlCommand { Connection = _conn, CommandTimeout = 0 })
+            {
+                cmd.CommandText = "EXECUTE [dbo].[AggAuctionData];";
                 cmd.ExecuteNonQuery();
             }
         }

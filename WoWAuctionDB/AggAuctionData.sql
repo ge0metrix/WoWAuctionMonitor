@@ -4,7 +4,7 @@ BEGIN
 
 SET NOCOUNT ON
 
-DELETE FROM AuctionAgg WHERE LoadDate = (SELECT MAX(LoadDate) FROM Auctions);
+DELETE FROM AuctionAgg WHERE LoadDate = (SELECT MAX(LoadDate) FROM [AuctionRaw]);
 
 WITH stdevs AS (
 	SELECT
